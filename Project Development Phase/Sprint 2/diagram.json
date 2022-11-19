@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "author": "vigneshwaran s",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -36.9, "left": 198.83, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "dht1:GND", "green", [ "v9", "h145.53" ] ],
+    [ "esp:D15", "dht1:VCC", "green", [ "h0" ] ],
+    [ "esp:GND.1", "dht1:SDA", "black", [ "h0" ] ]
+  ]
+}
